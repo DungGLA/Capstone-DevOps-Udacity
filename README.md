@@ -1,4 +1,4 @@
-# Udacity Cloud DevOps Capstone Project
+# Udacity Cloud DevOps Capstone Project - UP
 
 This is final project of Udacity Cloud DevOps Engineer Nanodegree Program.
 
