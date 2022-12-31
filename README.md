@@ -85,7 +85,6 @@ $ ./create-jenkins.sh jenkins-stack jenkins-server.yml jenkins-server-parameters
 - Login using admin account and complete the initial setup of Jenkins.
 - Install the following plugins in Jenkins:
   - [CloudBees AWS Credentials](https://plugins.jenkins.io/aws-credentials/)
-  - [Pipeline: AWS Steps](https://plugins.jenkins.io/pipeline-aws/)
   - [Blue Ocean](https://plugins.jenkins.io/blueocean/)
 - Add AWS credentials in Jenkins.
 
@@ -100,11 +99,11 @@ eksctl create cluster --name udacitycluster --nodegroup-name standard-workers --
 
 - Add Docker Hub credentials in Jenkins so that we can push docker image to Docker Hub.
 - Create new item in Jenkins of type `Pipeline`
-- In the configuration page of provide the GitHub repository as `https://github.com/sonntse130084/udacity-capstone-project` and script path as `Jenkinsfile`
+- In the configuration page of provide the GitHub repository as `https://github.com/DungGLA/Capstone-DevOps-Udacity.git` and script path as `Jenkinsfile`
 - Apply and save the pipeline.
 - Click on `Build Now` to trigger the pipeline
 - Once the pipeline passes with stage name `Create Service Pointing to Blue Replication Controller`, go to Load Balancer page in AWS console and look for DNS name
-- DNS name will be something like `http://aa40ac7ccc7f3400c909ba655a088ad2-535107187.us-east-1.elb.amazonaws.com`
+- DNS name will be something like `http://af0dfc67d36cf4f469afd28a760eb1ef-1149866563.us-east-1.elb.amazonaws.com`
 - In the browser, open a new tab and hit link as `http://<DNS_NAME>:8000/`. It will show the capstone project website.
 - Approve the pipeline to proceed to next stage
 - Once the pipeline is complete, service will be pointing to pods that has label as `app=green`
